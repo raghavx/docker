@@ -22,6 +22,29 @@ docker run ubuntu
 ```
 This command will run ubuntu image on docker host. This new image will utilise the underlying kernal of host os.
 
+## running a version of ubuntu 
+```
+docker run ubuntu:17.04
+```
+
+## run detach mode
+```
+docker run -d ubuntu sleep 10000
+```
+## volume mapping 
+```
+docker run -v /opt/containers/data/mysql1:/var/lib/mysql mysql
+```
+
+## port mapping 
+```
+docker run -p 3306:3306 mysql 
+docker run -p host_port:container_port mysql
+```
+
+ 
+
+
 # append a command 
 ```
 docker run ubuntu sleep 1000
